@@ -11,3 +11,8 @@ kubectl get pods
 Service 
 kubectl expose deployement test-my-imgs --port=300
 kubectl get svc 
+
+minikube ip 
+ssh docker@ip 
+pss tsuser 
+curl ip:3000
