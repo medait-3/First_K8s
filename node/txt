@@ -2,3 +2,12 @@ npm init -y
 npm i express
 change in package :start
 docker build . -t your_username/Repo
+docker login 
+docker push your_username/Repo
+--------------deploy on k8s
+kubectl create deployment test-my-imgs --image=medait/testk8s
+
+kubectl get pods
+Service 
+kubectl expose deployement test-my-imgs --port=300
+kubectl get svc 
