@@ -6,9 +6,8 @@ docker login
 docker push your_username/Repo
 --------------deploy on k8s
 kubectl create deployment test-my-imgs --image=medait/testk8s
-
 kubectl get pods
-Service 
+---------------create Service 
 kubectl expose deployement test-my-imgs --port=300
 kubectl get svc 
 
@@ -16,3 +15,13 @@ minikube ip
 ssh docker@ip 
 pss tsuser 
 curl ip:3000
+----- delete service
+kubectl delete svc NameService
+------ create service to connect  pod
+kubtectl expose deployment test-my-imgs --type=NodePort --port=3000``
+minikube  ip:port 
+minikube service NameOfService
+k describe deploy nameofdeploy
+----change imag 
+k set image deployment DeployName DeployName=youImage
+k rollout status deploy DeployName
