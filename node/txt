@@ -1,0 +1,4 @@
+npm init -y
+npm i express
+change in package :start
+docker build . -t your_username/Repo
